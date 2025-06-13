@@ -77,13 +77,12 @@ teavm.all {
     obfuscated = true
     sourceMap = true
     targetFileName = "../classes.js"
-    optimization = OptimizationLevel.BALANCED
+    //optimization = OptimizationLevel.BALANCED
     outOfProcess = false
     fastGlobalAnalysis = false
     processMemory = 1024
     entryPointName = 'main'
     mainClass = 'Start'
-    outputDir = '$buildDir/generated/teavm'
     properties = null
     sourceMap = true
     debugInformation = false
