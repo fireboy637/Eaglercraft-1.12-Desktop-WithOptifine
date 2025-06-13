@@ -74,10 +74,10 @@ dependencies {
 }
 
 teavm.all {
-    obfuscated = true
+    //obfuscated = true
     sourceMap = true
     targetFileName = "../classes.js"
-    //optimization = OptimizationLevel.BALANCED
+    optimization = OptimizationLevel.BALANCED
     outOfProcess = false
     fastGlobalAnalysis = false
     processMemory = 1024
