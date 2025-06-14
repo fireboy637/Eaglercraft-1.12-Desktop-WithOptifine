@@ -33,13 +33,13 @@ jobs:
       with:
         gradle-version: '8.6'
 
-    - name: Compile desktop runtime
-      run: ./gradlew clean build
+    - name: Compile JavaScript
+      run: ./gradlew clean generateJavaScript
       
     - uses: actions/upload-artifact@v4
       with:
-        name: Eagler-Unix
-        path: build/distributions/
+        name: Eagler-Unix-JS
+        path: javascript/
 
   build-windows:
 
@@ -67,5 +67,5 @@ jobs:
       
     - uses: actions/upload-artifact@v4
       with:
-        name: Eagler-JS
+        name: Eagler-Windows-JS
         path: javascript/
