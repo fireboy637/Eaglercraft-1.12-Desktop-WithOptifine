@@ -73,8 +73,8 @@ dependencies {
     teavm(teavm.libs.jsoApis)
 }
 
-teavm.all {
-    //obfuscated = true
+teavm.js {
+    obfuscated = true
     sourceMap = true
     targetFileName = "../classes.js"
     optimization = OptimizationLevel.BALANCED
@@ -84,6 +84,5 @@ teavm.all {
     entryPointName = 'main'
     mainClass = 'Start'
     properties = null
-    sourceMap = true
     debugInformation = false
 }
