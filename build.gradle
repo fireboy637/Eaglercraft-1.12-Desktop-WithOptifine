@@ -73,16 +73,21 @@ dependencies {
     teavm(teavm.libs.jsoApis)
 }
 
-teavm.js {
-    obfuscated = true
-    sourceMap = true
-    targetFileName = "../classes.js"
-    optimization = OptimizationLevel.BALANCED
-    outOfProcess = false
-    fastGlobalAnalysis = false
-    processMemory = 1024
-    entryPointName = 'main'
-    mainClass = 'Start'
-    properties = null
-    debugInformation = false
-}
+teavm {
+    all {
+        targetFileName = "../classes.js"
+        outOfProcess = false
+        fastGlobalAnalysis = false
+        processMemory = 1024
+        entryPointName = 'main'
+        mainClass = 'Start'
+        properties = null
+        debugInformation = false
+    }
+    js {
+        obfuscated = true
+        sourceMap = true
+    }
+    wasm {
+        optimization = OptimizationLevel.BALANCED
+    }
