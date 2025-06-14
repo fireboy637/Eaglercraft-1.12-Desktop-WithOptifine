@@ -77,10 +77,25 @@ teavm.wasm {
     outOfProcess = false
     fastGlobalAnalysis = false
     processMemory = 1024
-    entryPointName = 'main'
     mainClass = 'Start'
     properties = null
     debugInformation = false
     targetFileName = "./classesWASM.js"
     optimization = OptimizationLevel.BALANCED
+}
+
+teavm.js {
+    obfuscated = true
+    sourceMap = true
+    targetFileName = "../classes.js"
+    // optimization = OptimizationLevel.ADVANCED
+    outOfProcess = false
+    fastGlobalAnalysis = false
+    processMemory = 1024
+    entryPointName = 'main'
+    mainClass = 'Start'
+    outputDir = file("javascript")
+    properties = null
+    sourceMap = true
+    debugInformation = false
 }
