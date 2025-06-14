@@ -62,10 +62,10 @@ jobs:
       with:
         gradle-version: '8.6'
 
-    - name: Compile desktop runtime
-      run: ./gradlew clean build
+    - name: Compile JavaScript
+      run: ./gradlew clean generateJavaScript
       
     - uses: actions/upload-artifact@v4
       with:
-        name: Eagler-Windows
-        path: build/distributions/
+        name: Eagler-JS
+        path: javascript/
